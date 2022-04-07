@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -9,9 +10,9 @@ export default {
       lang: 'en'
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'format-detection', content: 'telephone=no' },
+      {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {name: 'format-detection', content: 'telephone=no'},
       {
         hid: 'description',
         name: 'description',
@@ -20,31 +21,24 @@ export default {
       {
         hid: 'keywords',
         name: 'keywords',
-        content: 'Data science, data scientist, deep learning, machine learning, Artifical intelligence'
-      },
+        content:
+          'Data science, data scientist, deep learning, machine learning, Artifical intelligence'
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/css/main.scss'
-  ],
+  css: ['@/assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: '~/plugins/plugin.js', mode: 'client' }
-  ],
+  plugins: [{src: '~/plugins/plugin.js', mode: 'client'}],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxtjs/google-fonts'
-  ],
+  buildModules: ['@nuxtjs/google-fonts'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -88,15 +82,11 @@ export default {
     hostname: 'https://www.joonsam.fr',
     gzip: true,
     generate: false, // Génère une version statique du sitemap quand activé. À utiliser avec nuxt generate.
-    routes: [
-      '/',
-      '/cv',
-      '/link'
-    ],
+    routes: ['/', '/cv', '/link'],
 
     robots: {
       UserAgent: '*'
     },
     trailingSlash: true
   }
-}
+};

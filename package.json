@@ -9,7 +9,8 @@
     "generate": "nuxt generate",
     "deploy": "rm -rf /Volumes/web/gvieira/&& cp -r ./dist/ /Volumes/web/gvieira/",
     "bgs": "yarn build && yarn generate && yarn start",
-    "full": "yarn generate && yarn deploy"
+    "full": "yarn generate && yarn deploy",
+    "code-style": "xo"
   },
   "dependencies": {
     "@nuxt/content": "^1.15.1",
@@ -30,6 +31,29 @@
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.6.2",
     "sass": "^1.49.11",
-    "sass-loader": "10"
-  }
+    "sass-loader": "10",
+    "pre-commit": "^1.2.2",
+    "xo": "^0.48.0"
+  },
+  "xo": {
+    "space": 2,
+    "prettier": true,
+    "rules": {
+      "unicorn/no-fn-reference-in-iterator": 0,
+      "unicorn/no-array-callback-reference": 0,
+      "unicorn/no-array-method-this-argument": 0,
+      "unicorn/no-reduce": 0
+    },
+    "envs": [
+      "mocha"
+    ]
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "pre-commit": [
+    "code-style"
+  ]
 }
