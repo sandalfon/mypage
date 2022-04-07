@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+$gvieira-color1: #36b480;
+$gvieira-color2: #c8d5f0;
+$gvieira-color3: rgb(48, 46, 46);
+$margin-decoration-right: 2.1em;
+$margin-decoration-left: 1.5em;
+$cicrcle-radius: 0.75em;
+$line-length: 12.5em;
+$line-width: 0.15em;
+$circle-space: 2.25em;
+
+$font-family-sans-serif: "Roboto";
+$breadcrumb-divider: none;
+$enable-responsive-font-sizes: true;
+
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap-vue/src/index.scss";
+
+body {
+  background: $gvieira-color3;
+}
+
+strong {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.no-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+.nav-item a{
+  text-align: left;
+  text-shadow: 0px 0px #00000000;
+  color: $gvieira-color1;
+  list-style-type: none;
+  
+}
+
+.nav-item > .nuxt-link-exact-active {
+  text-align: left;
+  text-shadow: 0px 0px #00000000;
+  color: $gvieira-color2;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+
+.main-content {
+  background:$gvieira-color3;
+  margin: 0 1em;
+  padding: 0 4em;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    margin: 0;
+    padding: 0 1em;
+  }
+}
+
+.center-content {
+  display: inline-block;
+  line-height:1.5em;
+  vertical-align: middle;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  max-width: 800px;
+}
+
+.gvieira-logo {
+  max-width: 60%;
+  margin: 1.5em;
+}
+
+.gvieira-footer a{
+  color: black;
+}
+
+.gvieira-text {
+  text-align: left;
+  text-shadow: 0px 0px #00000000;
+  color: $gvieira-color2,;
+  font-size: 1.2em;
+  list-style-type: circle;
+}
+
+a {
+  color: $gvieira-color1
+}
+
+
+@media (min-width: 992px) {
+  .gvieira-footer {
+    position: fixed;
+    bottom: 5px;
+    left: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav {
+    margin-top: 1em;
+    margin-left: 2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .circle-color1 {
+    width: $cicrcle-radius;
+    height: $cicrcle-radius;
+    background: $gvieira-color1;
+    border-radius: 50%;
+    z-index : 1;
+  }
+
+  .circle-color2 {
+    width: $cicrcle-radius;
+    height: $cicrcle-radius;
+    background: $gvieira-color2;
+    border-radius: 50%;
+    z-index : 1;
+  }
+
+  .line-color1{
+    width: $line-width;
+    height: $line-length;
+    background:$gvieira-color1;
+    z-index : 1;
+  }
+
+  .line-color2{
+    width: $line-width;
+    height: $line-length;
+    background:$gvieira-color2;
+    z-index : 1;
+  }
+
+  .circle-left-bottom{
+    position: fixed;
+    top: $line-length + $circle-space;
+    left: $margin-decoration-left;
+    z-index : 1;
+  }
+
+  .circle-left-top{
+    position: fixed;
+    top: $line-length + 1em;
+    left: $margin-decoration-left;
+    z-index : 1;
+    }
+
+
+  .line-left{
+    position: fixed;
+    top: 0em;
+    left: $margin-decoration-left + 0.5*$cicrcle-radius;
+    z-index : 1;
+  }
+
+  .circle-right-bottom{
+    position: fixed;
+    bottom: $line-length + $circle-space;
+    right: $margin-decoration-right;
+    z-index: 5;
+  }
+
+  .circle-right-top{
+    position: fixed;
+    bottom: $line-length + 1em;
+    right: $margin-decoration-right;
+    z-index: 5;
+    }
+
+
+  .line-right{
+    position: fixed;
+    bottom: 0em;
+    right: $margin-decoration-right + $cicrcle-radius*0.5;
+    z-index: 5;
+  }
+}
+
+.b-icon.bi {
+  font-size: 20px;
+  color: $gvieira-color2;
+}
+
+.center-content .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 200px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: #c8d5f0;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.center-content .slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: $gvieira-color1;
+
+}
+.center-content .slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 30px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 40px;
+    content: '•';
+    text-align: center;
+    opacity: 0.25;
+    color: $gvieira-color2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center-content .slick-next,.center-content .slick-prev {
+    font-size: 0x;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: none;  
+    color: $gvieira-color2;
+}
+.center-content .slick-prev {
+margin-left: -50px;
+}
+
+.center-content  .slick-prev:before,
+.center-content  .slick-next:before {
+  font-family: 'slick';
+  font-size: 50px;
+  line-height: 1;
+
+  opacity: 0.5;
+  color: $gvieira-color1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
